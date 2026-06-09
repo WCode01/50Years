@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="50 ЖАС МЕРЕЙТОЙ | Бағдат & Жамиля">
+<meta property="og:description" content="1 Тамыз 2026 | 18:00 | Алтын Ұя мейрамханасы, Өтеген Батыр">
+<meta property="og:image" content="https://wcode01.github.io/jubiley50/images/preview.jpg">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://wcode01.github.io/jubiley50/image/">
+<title>50 ЖАС МЕРЕЙТОЙ | Бағдат & Жамиля</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Marcellus',serif;
+background:#0a0a0a;
+color:#fff;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,215,0,.12),transparent 30%),
+radial-gradient(circle at 80% 80%,rgba(255,215,0,.08),transparent 30%);
+z-index:-1;
+}
+
+section{
+padding:100px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:150px;
+font-weight:700;
+letter-spacing:6px;
+background:linear-gradient(45deg,#FFD700,#FFF4B0,#FFD700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-shadow:0 0 30px rgba(255,215,0,.4);
+}
+
+.hero h2{
+font-family:'Cormorant Garamond',serif;
+font-size:60px;
+letter-spacing:4px;
+margin-top:30px;
+}
+
+.hero p{
+font-size:28px;
+letter-spacing:2px;
+margin-top:10px;
+color:#d8c27a;
+}
+
+@keyframes glow{
+0%,100%{
+filter:drop-shadow(0 0 15px gold);
+}
+50%{
+filter:drop-shadow(0 0 35px gold);
+}
+}
+
+.scroll{
+position:absolute;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
+animation:bounce 2s infinite;
+font-size:30px;
+}
+
+@keyframes bounce{
+50%{
+transform:translate(-50%,10px);
+}
+}
+
+.countdown{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:50px;
+}
+
+.box{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,215,0,.3);
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.box span{
+font-size:50px;
+font-weight:bold;
+color:#ffd700;
+display:block;
+}
+
+.invite{
+max-width:950px;
+margin:auto;
+padding:50px;
+text-align:center;
+font-size:15px;
+line-height:2;
+border:1px solid rgba(255,215,0,.35);
+border-radius:30px;
+background:rgba(255,255,255,.03);
+backdrop-filter:blur(15px);
+position:relative;
+box-shadow:0 0 40px rgba(255,215,0,.08);
+}
+
+.invite::before{
+position:absolute;
+top:-22px;
+left:50%;
+transform:translateX(-50%);
+font-size:42px;
+color:#FFD700;
+background:#0a0a0a;
+padding:0 15px;
+}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:35px;
+border-radius:25px;
+text-align:center;
+border:1px solid rgba(255,215,0,.3);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#ffd700;
+margin-bottom:15px;
+font-size:28px;
+}
+
+.names{
+text-align:center;
+padding:120px 20px;
+}
+
+.names h2{
+font-size:60px;
+font-family:'Playfair Display',serif;
+background:linear-gradient(45deg,#ffd700,#fff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:15px 35px;
+background:linear-gradient(45deg,#ffd700,#c9a000);
+color:black;
+font-weight:bold;
+border-radius:50px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.section-title{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:30px;
+color:#FFD700;
+margin-bottom:40px;
+}
+
+.map-box{
+overflow:hidden;
+border-radius:30px;
+border:1px solid rgba(255,215,0,.35);
+box-shadow:0 0 50px rgba(255,215,0,.08);
+}
+
+footer{
+padding:50px;
+text-align:center;
+color:#999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:70px;
+}
+
+.hero h2{
+font-size:35px;
+}
+
+.countdown{
+grid-template-columns:repeat(2,1fr);
+}
+
+.names h2{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div>
+
+<h1>50</h1>
+
+<h2>ЖАС МЕРЕЙТОЙ</h2>
+
+<p>Бағдат & Жамиля</p>
+
+<div class="countdown">
+
+<div class="box">
+<span id="days">0</span>
+Күн
+</div>
+
+<div class="box">
+<span id="hours">0</span>
+Сағат
+</div>
+
+<div class="box">
+<span id="minutes">0</span>
+Минут
+</div>
+
+<div class="box">
+<span id="seconds">0</span>
+Секунд
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll">↓</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="invite">
+
+<h2 style="color:#FFD700;margin-bottom:20px;font-family:'Cormorant Garamond',serif;font-size:20px;">
+Құрметті ағайын-туыс,
+құда-жекжат, дос-жаран!
+</h2>
+
+<p>
+«Елу жас – ел ағасы» деген дана халқымыздың сөзі бар.
+Аллаға шүкір, өмір жолының жарты ғасырлық белесіне жетіп,
+50 жас мерейтойымызды атап өтпекпіз.
+</p>
+
+<br>
+
+<p>
+Осы қуанышты күнде сіздерді ақ дастарханымыздың
+қадірлі қонағы болуға шын жүректен шақырамыз.
+</p>
+
+<br>
+
+<p>
+Сіздердің ақ тілектеріңіз бен ізгі ниеттеріңіз
+мерекеміздің сәнін келтіріп,
+қуанышымызды еселей түседі.
+</p>
+
+<br>
+
+</div>
+
+<div class="info">
+
+<div class="card">
+<h3>📅 Күні</h3>
+<p>1 Тамыз 2026</p>
+</div>
+
+<div class="card">
+<h3>🕕 Уақыты</h3>
+<p>18:00</p>
+</div>
+
+<div class="card">
+<h3>📍 Мекенжай</h3>
+<p>Алтын Ұя мейрамханасы<br>Өтеген Батыр</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="location">
+
+<div class="container">
+
+<h2 class="section-title">
+Мереке өтетін орын
+</h2>
+
+<div class="map-box">
+
+<iframe
+src="https://maps.google.com/maps?q=43.398438,76.960030&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="500"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="names">
+
+<h2>Той Иелері</h2>
+
+<h2>Бағдат & Жамиля</h2>
+
+<a href="https://wa.me/" class="btn">
+Тойға келемін
+</a>
+
+<div class="card">
+    <h3>📍 Мекенжай</h3>
+    <p>
+        Алтын Ұя мейрамханасы<br>
+        Өтеген батыр
+    </p>
+
+    <a href="https://2gis.kz/almaty/geo/70000001035126484"
+       target="_blank"
+       class="btn-map">
+       2GIS арқылы ашу
+    </a>
+</div>
+
+</section>
+
+<footer>
+
+Сіздерді асыға күтеміз ❤️
+
+</footer>
+
+<script>
+
+const eventDate =
+new Date("August 1, 2026 18:00:00").getTime();
+
+setInterval(()=>{
+
+const now = new Date().getTime();
+
+const diff = eventDate - now;
+
+const days =
+Math.floor(diff/(1000*60*60*24));
+
+const hours =
+Math.floor((diff%(1000*60*60*24))
+/(1000*60*60));
+
+const minutes =
+Math.floor((diff%(1000*60*60))
+/(1000*60));
+
+const seconds =
+Math.floor((diff%(1000*60))
+/1000);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
